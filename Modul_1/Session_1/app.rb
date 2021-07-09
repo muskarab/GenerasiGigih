@@ -1,10 +1,10 @@
 require_relative 'person'
 
-jin = Person.new("Jin Sakai", 100, 50)
+jin = Person.new("Jin Sakai", 100, 50, 80)
 puts jin
 puts "\n"
 
-khotun = Person.new("Khotun Khan", 500, 50)
+khotun = Person.new("Khotun Khan", 500, 50, 0)
 puts khotun
 puts "\n"
 

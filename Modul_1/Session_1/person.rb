@@ -1,11 +1,12 @@
 class Person
     attr_accessor :hitpoint
-    attr_reader :name, :attack_damage
+    attr_reader :name, :attack_damage, :deflect
     
-    def initialize(name, hitpoint, attack_damange)
+    def initialize(name, hitpoint, attack_damange, deflect)
         @name = name
         @hitpoint = hitpoint
         @attack_damange = attack_damange
+        @deflect = deflect
     end
 
     def to_s
@@ -18,8 +19,8 @@ class Person
     end
 
     def take_damage(damage)
-        a = rand(10)
-        if a <= 8
+        a = rand(10) * 10
+        if a <= @deflect
             puts "#{@name} deflects the attack."
         else
             @hitpoint -= damage
