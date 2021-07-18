@@ -4,5 +4,7 @@
 * Session 3 : Composition
 # Modul 2
 * Session 1 : HTTP Method
+* Session 2 : Database cardinality & Entity relationship diagram
+* Session 3 : Routing and rendering
 
 # GGBE01108 - Mustafa Kamal Rabbani
