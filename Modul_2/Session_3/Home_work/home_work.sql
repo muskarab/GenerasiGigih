@@ -1,5 +1,6 @@
 -- Nomer 1
 https://github.com/muskarab/GenerasiGigih/tree/main/Modul_2/Session_3/Home_work/ERD.png
+
 -- Nomer 2
 CREATE TABLE `customers` (
   `id` int NOT NULL AUTO_INCREMENT,
