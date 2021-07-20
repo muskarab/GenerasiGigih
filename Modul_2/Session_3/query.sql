@@ -1,8 +1,9 @@
 -- #Soal_1
 SELECT items.id, items.name, categories.name 
 FROM items 
-LEFT JOIN item_categories ON items.id = item_categories.item_id 
-LEFT JOIN categories ON categories.id = item_categories.category_id;
+JOIN item_categories ON items.id = item_categories.item_id 
+JOIN categories ON categories.id = item_categories.category_id
+ORDER BY items.id ASC;
 
 -- #Soal_2
 SELECT items.id, items.name, categories.name 
