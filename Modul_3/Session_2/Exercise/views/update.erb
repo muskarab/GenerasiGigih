@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update <%= item.name %></h1>
+    <form action="/items/<%= "#{params[:id]}" %>/update" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <label>Item Name: </label>
+        <input type="text" name="name" placeholder="Item Name" value="<%= item.name %>">
+        <label>Price: </label>
+        <input type="number" name="price" placeholder="Price" value="<%= item.price %>">
+        <select name="category_id">
+        <% categories.each do |category| %>
+            <% if category.id == item.category.id %>
+            <option value=<%= category.id %> selected><%= category.name %></option>
+            <% else %>
+            <option value=<%= category.id %>><%= category.name %></option>
+            <% end %>
+        <% end %>
+        </select>
+        <input type="submit" value="Update Item">
+    </form>
+</body>
+</html>
