@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li>Reference Number = <%= order.reference_no%></li>
-        <li>Customer Name = <%= order.customer_name%></li>
-        <li>Date = <%= order.date%></li>
-    </ul>
+    <h1>Item Detail</h1>
+    <p>Name: <%= item.name %></p>
+    <p>Price: <%= item.price %></p>
+    <p>Category: <%= item.category.name %></p>
+<a href="/"><button>Back</button></a>
 </body>
 </html>

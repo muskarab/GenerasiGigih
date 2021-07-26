@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Items</h2>
+    <a href="/category"><button>List Category</button></a>
+    <table> 
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th></th>
+            <th>Actions</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <% items.each do |item| %>
+            <tr>
+                <td><%= item.name %></td>
+                <td><%= item.price %></td>
+                <td><%= item.category.name %></td>
+                <td><a href="/item/show?id=<%=item.id%>"><button>Show</button></a></td>
+                <td><a href="/item/update?id=<%=item.id%>"><button>Edit</button></a></td>
+                <td>
+                    <form action="/item/delete?id=<%=item.id%>" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+<a href="/item/create"><button>New Item</button></a>
+</body>
+</html>

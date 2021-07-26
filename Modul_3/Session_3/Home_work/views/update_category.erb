@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% categories.each do |category| %>
+    <h1>Update <%= category.name %></h1>
+    <form action="/category/update" method="POST">
+        <input type="hidden" name="id" value="<%= category.id %>">
+        <label>Category Name: </label>
+        <input type="text" name="name" placeholder="Category Name" value="<%= category.name  %>">
+        <input type="submit" value="Update Item">
+    </form>
+    <% end %>
+    <br>
+    <a href="/"><button>Back</button></a>
+</body>
+</html>
