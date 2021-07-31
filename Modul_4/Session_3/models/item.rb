@@ -21,10 +21,10 @@ class Item
 
     def save
         return false unless valid?
-    
         client = create_db_client
         client.query("INSERT INTO items(name, price) VALUES ('#{name}', #{price})")
-      end
+        true
+    end
 
     def Item.get_all_items
         client = create_db_client
