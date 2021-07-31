@@ -10,12 +10,12 @@ describe Item do
             end
         end
 
-        # context 'with no price ' do
-        #     it 'should return false with nil price' do
-        #         item = Item.new('id', 'name', nil, 'category')
-        #         expect(item.valid?).to eq(false)
-        #     end
-        # end
+        context 'with no price ' do
+            it 'should return false with nil price' do
+                item = Item.new('id', 'name', nil, 'category')
+                expect(item.valid?).to eq(false)
+            end
+        end
     end
 
     
