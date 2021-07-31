@@ -16,19 +16,34 @@ describe ItemController do
         end
     end
 
-    # describe '#create_item_form' do
-    #     context 'show form to create items' do
-    #         it 'should show form to create items' do
-    #             controller = ItemController.new
-    #             actual_view = controller.create_item_form
+    describe '#create_item_form' do
+        context 'show form to create items' do
+            it 'should show form to create items' do
+                controller = ItemController.new
+                actual_view = controller.create_item_form
         
-    #             categories = Category.get_all_categories
-    #             expected_view = ERB.new(File.read('./views/create_item.erb')).result(binding)
+                categories = Category.get_all_categories
+                expected_view = ERB.new(File.read('./views/create_item.erb')).result(binding)
         
-    #             expect(expected_view).to eq(actual_view)
-    #         end
-    #     end
-    # end
+                expect(expected_view).to eq(actual_view)
+            end
+        end
+    end
+
+    describe '#show_item' do
+        context 'when given valid parameters' do
+            it 'should show item and render show item page' do
+                params = ({
+                    'item_id' => '1',
+                    'name' => 'name',
+                    'price' => 'price',
+                    'category_id' => '1'
+                })
+                controller = ItemController.new
+                controller.show_item(params.item_id)
+            end
+        end
+    end
 
     describe '#create_item' do
         context 'when given valid parameters' do
