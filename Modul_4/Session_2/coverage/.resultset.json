@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/muskarab/GenerasiGigih/Modul_4/Session_2/simple_encoder.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          6,
+          6,
+          12,
+          5,
+          5,
+          5,
+          2,
+          2,
+          null,
+          5,
+          7,
+          7,
+          7,
+          7,
+          3,
+          3,
+          null,
+          7,
+          null,
+          0,
+          null,
+          null,
+          6,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1627482276
+  }
+}
