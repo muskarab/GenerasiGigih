@@ -23,6 +23,13 @@ describe Item do
                 expect(item.valid?).to eq(false)
             end
         end
+
+        context 'with no category ' do
+            it 'should return false with nil price' do
+                item = Item.new('id', 'name', 'price', nil)
+                expect(item.valid?).to eq(false)
+            end
+        end
     end
 
     # describe '#save' do
