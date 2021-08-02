@@ -30,21 +30,6 @@ describe ItemController do
         end
     end
 
-    describe '#show_item' do
-        context 'when given valid parameters' do
-            it 'should show item and render show item page' do
-                params = ({
-                    'item_id' => '1',
-                    'name' => 'name',
-                    'price' => 'price',
-                    'category_id' => '1'
-                })
-                controller = ItemController.new
-                controller.show_item(params.item_id)
-            end
-        end
-    end
-
     describe '#create_item' do
         context 'when given valid parameters' do
             it 'should save item and render items page' do

@@ -73,6 +73,7 @@ class Item
         client = create_db_client
         client.query("INSERT INTO items(name, price) VALUES('#{name}', #{price})")
         client.query("INSERT INTO item_categories(item_id, category_id) VALUES(#{client.last_id}, #{category_id})")
+        true
     end
     
     def Item.update_item(id, name, price, category_id)

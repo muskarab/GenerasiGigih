@@ -14,5 +14,9 @@
 * [Session 1 : Unit Test](https://github.com/muskarab/GenerasiGigih/tree/main/Modul_4/Session_1)
 * [Session 2 : TDD (Test Driven Development)](https://github.com/muskarab/GenerasiGigih/tree/main/Modul_4/Session_2)
 * [Session 3 : Unit Test for Model and Cotroller](https://github.com/muskarab/GenerasiGigih/tree/main/Modul_4/Session_3)
+# Modul 5
+* [Session 1 : Git]()
+* [Session 2 : Deployment]()
+* [Session 3 : CI/CD]()
 
 # GGBE01108 - Mustafa Kamal Rabbani
