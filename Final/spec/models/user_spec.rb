@@ -8,5 +8,12 @@ describe User do
                 expect(user.valid?).to eq(true)
             end
         end
+
+        context "with no username" do
+            it "should return false with nil username" do
+                user = User.new('id', nil, 'password')
+                expect(user.valid?).to eq(false)
+            end
+        end
     end
 end
